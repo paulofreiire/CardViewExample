@@ -9,8 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.cardview.R;
+import com.example.cardview.model.Postagem;
+
+import java.util.List;
 
 public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyViewHolder> {
+
+    private List<Postagem> postagens;
+    public PostagemAdapter(List<Postagem> p) {
+        this.postagens = p;
+    }
 
     @NonNull
     @Override
@@ -21,14 +29,15 @@ public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        myViewHolder.textNome.setText("Paulo Freire");
-        myViewHolder.textPostagem.setText("#tbt Viagem!");
-        myViewHolder.imagePostagem.setImageResource(R.drawable.imagem1);
+        Postagem postagem = postagens.get(i);
+        myViewHolder.textNome.setText(postagem.getNome());
+        myViewHolder.textPostagem.setText(postagem.getPostagem());
+        myViewHolder.imagePostagem.setImageResource(postagem.getImagem());
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return postagens.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
