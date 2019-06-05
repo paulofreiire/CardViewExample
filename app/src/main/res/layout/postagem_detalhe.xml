@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_margin="6dp" android:elevation="6dp">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:padding="10dp">
+            <TextView
+                    android:text="Paulo Freire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textNome" android:textSize="18sp"/>
+            <TextView
+                    android:text="Agora mesmo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textDate"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" app:srcCompat="@drawable/imagem1" android:id="@+id/imagePostagem"
+                    android:scaleType="centerCrop"/>
+            <TextView
+                    android:text="#tbt viagem Legal!"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textPostagem"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="Gostei"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnLike" android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_favorite_black_24dp"/>
+            <Button
+                    style="?attr/buttonBarButtonStyle"
+                    android:text="Comentar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnComment" android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_chat_bubble_black_24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
